@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(21, 2, 104);
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .showcase {
+            display: none;
+            padding: 20px;
+        }
+
+        .showcase.active {
+            display: block;
+        }
+
+        .media-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .media-list img, .media-list video {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Samis's-Studio</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Videography</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Get a Quote</a></li>
+            <li><a href="#" id="ourWorksButton">Our Projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="showcase" id="showcase">
+    <h2></h2>
+    <h2 style="text-align:center; color: rgba(46, 46, 163, 0.756);">Our Best Projects</h2>
+    <div class="media-list">
+        <title>Video Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            padding: 20px;
+        }
+        .video-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .video-item video {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .video-title {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(22, 3, 117);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="video-grid" id="videoGrid"></div>
+
+    <script>
+        // Array of video objects 
+        const videos = [
+            { title: "Outdoor", src: "outdoor.mp4" },
+            { title: "G-Shock", src: "G-Shock.mp4" },
+            { title: "Pre Wedding  Shoot Full Trailer", src: "Pre Wedding  Shoot Full Trailer.mp4" },
+            { title: "Tissot", src: "TISSOT .mp4" },
+            
+            
+            
+
+            
+        ];
+
+        // Sort videos by title in ascending order
+        videos.sort((a, b) => a.title.localeCompare(b.title));
+
+        // Get the video grid container
+        const videoGrid = document.getElementById('videoGrid');
+
+        // Populate the grid with videos
+        videos.forEach(video => {
+            const videoItem = document.createElement('div');
+            videoItem.className = 'video-item';
+
+            const videoElement = document.createElement('video');
+            videoElement.src = video.src;
+            videoElement.controls = true;
+
+            const videoTitle = document.createElement('div');
+            videoTitle.className = 'video-title';
+            videoTitle.textContent = video.title;
+
+            videoItem.appendChild(videoElement);
+            videoItem.appendChild(videoTitle);
+            videoGrid.appendChild(videoItem);
+        });
+    </script>
+        
+        <!-- <title>PhotoProject1</title>
+    <style>
+        .photo {
+            border: 2px solid #000;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <h1 style="color: rgb(53, 13, 148); font-size: 16px;">Mrs Rehana's Wedding Night</h1>
+
+
+<img src="C:\Users\Asus\Desktop\Samis Photo\ss_photography_44.jpg" alt="Mrs rehana Wedding" width="300">
+        <img src="C:\Users\Asus\Desktop\Samis Photo\ss_photography_22.jpg" alt="Sample Image 2">
+       <video src="E:\Mvudeo\Telephone.mp4" controls></video>
+       
+        <video src="C:\Users\Asus\Desktop\Samis Photo\Mustafa & Jerin - Crowne Plaza Resort Colchester .mp4" controls></video>
+        <img src="image3.jpg" alt="Sample Image 3">
+        <video src="video2.mp4" controls></video>
+        <img src="image4.jpg" alt="Sample Image 4"> -->
+    </div>
+</div>
+
+<script>
+    const ourWorksButton = document.getElementById('ourWorksButton');
+    const showcase = document.getElementById('showcase');
+
+    ourWorksButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        showcase.classList.toggle('active');
+    });
+</script>
+
+
+    
+
+</body>
+</html>
